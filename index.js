@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/listItems', function (req, res) {
-   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+   fs.readFile( __dirname + "/data.json", 'utf8', function (err, data) {
       console.log( data );
       res.setHeader('Content-Type', 'application/json');
       res.end(data);
